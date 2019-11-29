@@ -13,7 +13,8 @@ class Bucket(models.Model):
 class Todo(models.Model):
     job_todo = models.CharField(max_length=200)
     completed = models.BooleanField(default=False)
-    bucket = models.ForeignKey(Bucket, on_delete=models.CASCADE)
+    bucket = models.ForeignKey(
+        Bucket, on_delete=models.CASCADE, related_name='todos')
 
     def __str__(self):
         return self.job_todo
