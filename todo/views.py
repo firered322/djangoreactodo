@@ -13,4 +13,4 @@ from .models import Bucket, Todo
 
 class TodoView(viewsets.ModelViewSet):
     serializer_class = TodoSerializer
-    queryset = Bucket.objects.all()
+    queryset = Todo.objects.all()

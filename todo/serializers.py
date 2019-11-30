@@ -4,5 +4,5 @@ from .models import Bucket, Todo
 
 class TodoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Bucket
-        fields = ('bucket_name', 'job_todo', 'completed')
+        model = Todo
+        fields = ('id', 'bucket', 'job_todo', 'completed')
