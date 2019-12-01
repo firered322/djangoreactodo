@@ -25,7 +25,12 @@ SECRET_KEY = '^@-ce)u#kjh6dp*$v1&v8qfl4-o6n8!xar8-_%dzyo3=r^-!f2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_EXPOSE_HEADERS = (
+    'Access-Control-Allow-Origin: *',
+)
 
 
 # Application definition
@@ -129,6 +134,8 @@ STATICFILES_DIRS = [
 
 STATIC_URL = '/static/'
 
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000',
-]
+# CORS_ORIGIN_WHITELIST = [
+#     'http://localhost:3000',
+#
+
+CSRF_COOKIE_NAME = "XCSRF-TOKEN"
